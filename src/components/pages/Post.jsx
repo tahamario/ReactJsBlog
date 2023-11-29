@@ -2,7 +2,7 @@ import axios from 'axios';
 import React, { useContext, useEffect, useState } from 'react'
 import { Link, useNavigate, useParams } from 'react-router-dom'
 import './Post.css'
-import { userContext } from '../App';
+import { userContext } from '../../App';
 import Swal from 'sweetalert2'
 
 function Post() {

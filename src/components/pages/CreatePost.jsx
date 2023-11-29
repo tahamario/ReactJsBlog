@@ -2,7 +2,7 @@ import React, { useContext, useState } from 'react'
 import './CreatePost.css'
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
-import { userContext } from '../App';
+import { userContext } from '../../App';
 import { toast } from 'react-toastify';
 
 function CreatePost() {

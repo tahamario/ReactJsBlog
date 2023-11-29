@@ -1,9 +1,9 @@
 import React, { useContext } from 'react'
 import './Navbar.css'
 import { Link, useNavigate } from 'react-router-dom'
-import { userContext } from '../App'
+import { userContext } from '../../App'
 import axios from 'axios';
-import logo from '../assets/react.svg'
+import logo from '../../assets/react.svg'
 
 function Navbar() {
     const user = useContext(userContext);

@@ -1,18 +1,18 @@
 import React, { createContext, useEffect, useState } from 'react'
 import './App.css'
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Navbar from './components/Navbar';
-import Register from './components/Register';
-import Login from './components/Login';
-import Home from './components/Home';
+import Navbar from './components/layouts/Navbar';
+import Register from './components/auth/Register';
+import Login from './components/auth/Login';
+import Home from './components/pages/Home';
 import axios from 'axios';
-import CreatePost from './components/CreatePost';
-import Post from './components/Post';
-import EditPost from './components/EditPost';
+import CreatePost from './components/pages/CreatePost';
+import Post from './components/pages/Post';
+import EditPost from './components/pages/EditPost';
 //toastify
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import About from './components/About';
+import About from './components/pages/About';
 
 export const userContext = createContext();
 
