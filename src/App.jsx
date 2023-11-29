@@ -9,10 +9,12 @@ import axios from 'axios';
 import CreatePost from './components/pages/CreatePost';
 import Post from './components/pages/Post';
 import EditPost from './components/pages/EditPost';
+import About from './components/pages/About';
+
 //toastify
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import About from './components/pages/About';
+
 
 export const userContext = createContext();
 
