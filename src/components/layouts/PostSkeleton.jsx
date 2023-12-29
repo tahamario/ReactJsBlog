@@ -7,7 +7,7 @@ function PostSkeleton({ cards }) {
         Array(cards).fill(0).map((item, index) => (
             <div className='card-skeleton' key={index}>
                 <div className="left-col">
-                    <Skeleton width={235} height={200} />
+                    <Skeleton style={{ width: 'auto', height:'100%' }} />
                 </div>
                 <div className="right-col">
                     <Skeleton style={{ margin: '1rem 0' }} />
