@@ -41,7 +41,7 @@ function Home() {
             {currentPosts.map((post, index) => (
                 <div key={index} className='post_card'>
                     <div className='post_img'>
-                        <img src={`http://localhost:3001/images/${post.file}`} alt={`post ${index + 1} image`} />
+                        <img src={`https://feelfreeblog-back.onrender.com/images/${post.file}`} alt={`post ${index + 1} image`} />
                     </div>
                     <div className='post_card_2ndside'>
                         <div className='post_text'>
