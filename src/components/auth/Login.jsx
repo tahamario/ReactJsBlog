@@ -21,12 +21,12 @@ function Login() {
                         position: toast.POSITION.TOP_RIGHT,
                     })
                 } else if (res.data.status == 200) {
-                    // window.location.href = '/';
+                    window.location.href = '/';
 
                     // Storing the token securely (you may want to use a more secure storage mechanism)
                     localStorage.setItem('token', res.data.token);
 
-                    console.log(res.data)
+                    // console.log(res.data)
                 }
             })
             .catch(err => console.log(err))

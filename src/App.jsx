@@ -32,12 +32,13 @@ function App() {
 
   useEffect(() => {
     axios.get('https://feelfreeblog-back.onrender.com/', {
+      //i add this header to replace the cookie method that i do in localhost
       headers: {
         'Authorization': `${localStorage.getItem('token')}`
       }
     }).then(
       (res) => {
-        console.log(res.data)
+        // console.log(res.data)
         setUser({
           email: res.data.email,
           username: res.data.username,
