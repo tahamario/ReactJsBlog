@@ -10,6 +10,8 @@ function Navbar() {
     const navigate = useNavigate()
 
     const handleLogout = () => {
+        localStorage.removeItem('token');
+        
         axios.get('https://feelfreeblog-back.onrender.com/logout').then(
             (res) => {
                 if (res.data.status == 200) {
