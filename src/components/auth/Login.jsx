@@ -21,7 +21,8 @@ function Login() {
                         position: toast.POSITION.TOP_RIGHT,
                     })
                 } else if (res.data.status == 200) {
-                    window.location.href = '/';
+                    // window.location.href = '/';
+                    console.log(res.data)
                 }
             })
             .catch(err => console.log(err))
