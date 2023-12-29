@@ -27,8 +27,15 @@ function App() {
   })
 
   axios.defaults.withCredentials = true;
+  // Include the token in subsequent API requests
+  axios.defaults.headers.common['Authorization'] = `Bearer ${localStorage.getItem('token')}`
+  
   useEffect(() => {
-    axios.get('https://feelfreeblog-back.onrender.com/').then(
+    axios.get('https://feelfreeblog-back.onrender.com/', {
+      headers: {
+        'Authorization': `Bearer ${localStorage.getItem('token')}`
+      }
+    }).then(
       (res) => {
         setUser({
           email: res.data.email,
