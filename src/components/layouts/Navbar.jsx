@@ -10,7 +10,7 @@ function Navbar() {
     const navigate = useNavigate()
 
     const handleLogout = () => {
-        axios.get('http://localhost:3001/logout').then(
+        axios.get('https://feelfreeblog-back.onrender.com/logout').then(
             (res) => {
                 if (res.data.status == 200) {
                     navigate(0);

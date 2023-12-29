@@ -18,11 +18,11 @@ function EditPost() {
     const navigate = useNavigate();
 
     useEffect(() => {
-        axios.get('http://localhost:3001/getpostbyid/' + id)
+        axios.get('https://feelfreeblog-back.onrender.com/getpostbyid/' + id)
             .then(post => {
                 if (post.data.status == 200) {
                     setPost(post.data.data);
-                    setImagLink(`http://localhost:3001/images/${post.data.data.file}`);
+                    setImagLink(`https://feelfreeblog-back.onrender.com/images/${post.data.data.file}`);
                 } else if (post.data.status == 401) {
                     console.log(post.data.message);
                 }
@@ -41,7 +41,7 @@ function EditPost() {
         formData.append('description', post.description);
         formData.append('file', post.file);
 
-        axios.put('http://localhost:3001/edit', formData)
+        axios.put('https://feelfreeblog-back.onrender.com/edit', formData)
             .then((res) => {
                 if (res.data.status == 200) {
                     toast.success(res.data.message, {

@@ -14,7 +14,7 @@ function Login() {
 
     const handleSubmit = (e) => {
         e.preventDefault()
-        axios.post('http://localhost:3001/login', { loginData })
+        axios.post('https://feelfreeblog-back.onrender.com/login', { loginData })
             .then((res) => {
                 if (res.data.status == 401) {
                     toast.error(res.data.message, {

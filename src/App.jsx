@@ -10,10 +10,12 @@ import CreatePost from './components/pages/CreatePost';
 import Post from './components/pages/Post';
 import EditPost from './components/pages/EditPost';
 import About from './components/pages/About';
+import Comments from './components/pages/Comments';
 
 //toastify
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import { SkeletonTheme } from 'react-loading-skeleton';
 
 
 export const userContext = createContext();
@@ -26,7 +28,7 @@ function App() {
 
   axios.defaults.withCredentials = true;
   useEffect(() => {
-    axios.get('http://localhost:3001/').then(
+    axios.get('https://feelfreeblog-back.onrender.com/').then(
       (res) => {
         setUser({
           email: res.data.email,
@@ -42,18 +44,21 @@ function App() {
   return (
     <>
       <userContext.Provider value={user}>
-        <BrowserRouter>
-          <Navbar />
-          <Routes>
-            <Route path='/' element={<Home />} />
-            <Route path='/register' element={<Register />} />
-            <Route path='/login' element={<Login />} />
-            <Route path='/create' element={<CreatePost />} />
-            <Route path='/post/:id' element={<Post />} />
-            <Route path='/edit/:id' element={<EditPost />} />
-            <Route path='/about' element={<About />} />
-          </Routes>
-        </BrowserRouter>
+        <SkeletonTheme baseColor="#7b7979" highlightColor="#8d8c8c">
+          <BrowserRouter>
+            <Navbar />
+            <Routes>
+              <Route path='/' element={<Home />} />
+              <Route path='/register' element={<Register />} />
+              <Route path='/login' element={<Login />} />
+              <Route path='/create' element={<CreatePost />} />
+              <Route path='/post/:id' element={<Post />} />
+              <Route path='/edit/:id' element={<EditPost />} />
+              <Route path='/about' element={<About />} />
+              <Route path='/comments' element={<Comments />} />
+            </Routes>
+          </BrowserRouter>
+        </SkeletonTheme>
       </userContext.Provider>
 
       <ToastContainer

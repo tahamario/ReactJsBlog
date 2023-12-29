@@ -18,7 +18,7 @@ function Post() {
     const navigate = useNavigate()
 
     useEffect(() => {
-        axios.get('http://localhost:3001/getpostbyid/' + id)
+        axios.get('https://feelfreeblog-back.onrender.com/getpostbyid/' + id)
             .then(post => {
                 if (post.data.status == 200) {
                     setPost(post.data.data);
