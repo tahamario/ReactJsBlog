@@ -44,7 +44,7 @@ function Register() {
         const isValid = validation()
 
         if (isValid) {
-            axios.post('http://localhost:3001/register', { registerData })
+            axios.post('https://feelfreeblog-back.onrender.com/register', { registerData })
                 .then((res) => {
                     if (res.data.status == 401) {
                         toast.error(res.data.message, {

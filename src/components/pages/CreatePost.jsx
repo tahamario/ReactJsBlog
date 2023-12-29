@@ -48,7 +48,7 @@ function CreatePost() {
             formData.append('file', postData.file);
             formData.append('madeBy', user.email);
 
-            axios.post('http://localhost:3001/create', formData)
+            axios.post('https://feelfreeblog-back.onrender.com/create', formData)
                 .then((res) => {
                     if (res.data.status == 401) {
                         toast.error(res.data.message, {
