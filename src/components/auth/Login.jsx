@@ -22,9 +22,10 @@ function Login() {
                     })
                 } else if (res.data.status == 200) {
                     // window.location.href = '/';
-                    
+
                     // Storing the token securely (you may want to use a more secure storage mechanism)
                     localStorage.setItem('token', res.data.token);
+
                     console.log(res.data)
                 }
             })
